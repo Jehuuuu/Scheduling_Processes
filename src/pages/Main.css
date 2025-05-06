@@ -1,0 +1,366 @@
+.main {
+    min-height: 100dvh;
+    min-width: 100dvw;
+
+    padding: 20px;
+
+    display: grid;
+    grid-template-rows: 0.5fr 1fr 1.5fr;
+}
+
+.cont-template {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.1);
+    padding: 20px 10px;
+
+    width: 100%;
+}
+
+.policy-cont {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.policy-cont .policies {
+    display: flex;
+    gap: 30px;
+    width: 80%;
+}
+
+.policy-cont .selected-policy {
+    background-color: var(--color-blue);
+    color: white;
+}
+
+.info {
+    position: absolute;
+    right: 20px;
+    color: var(--color-blue);
+    cursor: pointer;
+}
+
+.pcb-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    flex-shrink: 0; /* Prevents header from shrinking */
+}
+.title-contain{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.title-contain h1{
+  /* width: max-content; */
+  white-space: nowrap;
+  padding-right: 30px;
+  margin-bottom: 0px;
+}
+
+.title-contain .btn-primary {
+  border-radius: 0px;
+  padding: 6px 12px;
+}
+
+.pcb-header .dropdown {
+    font-family: 'Inter', sans-serif;
+}
+
+.pcb-header .btn-cont {
+    display: flex;
+    align-items: center;
+}
+
+.new-process {
+    border-radius: 0px !important;
+    width: fit-content;
+    color: var(--color-blue) !important;
+    background-color: white !important;
+    border: 1px solid var(--color-blue) !important;
+    font-size: medium !important;
+}
+
+.new-process:hover {
+    background-color: var(--color-blue) !important;
+    color: white !important;
+}
+
+.pcb-header .dropdown .dropdown-item:hover {
+    background-color: var(--color-blue-lighter) !important;
+}
+
+.mic {
+    color: var(--color-blue);
+    cursor: pointer;
+    margin-right: 20px;
+    border-radius: 20px;
+    border: none;
+    background: no-repeat;
+}
+
+.mic:hover {
+    background-color: var(--color-blue-lighter);
+}
+
+.pcb-table-header, .memory-table-header, .jobqueue-table-header {
+    padding: 20px 0;
+    font-weight: 600;
+}
+
+.table-no-scroll {
+    margin-right: 0;
+}
+
+.table-scroll {
+    margin-right: 10px;
+}
+
+/* info modal */
+.policy-info .modal-content {
+    padding: 30px;
+}
+
+.policy-info p {
+    text-align: justify;
+    margin-top: 20px;
+}
+
+/* no data */
+.no-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.no-data img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 5px;
+}
+
+.no-data p {
+    margin: 0;
+    color: gray;
+    font-size: small;
+}
+
+/* pcb rows */
+.pcb-table {
+    flex: 1;
+    overflow: auto;
+    min-height: 0; /* Important for flex child scrolling */
+}
+
+.pcb-row,
+.pcb-table-header {
+    display: grid;
+    grid-template-columns: 0.1fr repeat(9, 1fr) 0.5fr;
+    margin-left: 10px;
+}
+
+.pcb-row, .memory-row, .jobqueue-row {
+    padding: 10px 0;
+    background-color: transparent;
+}
+
+.pcb-cell-inactive {
+    opacity: 0;
+}
+
+.pcb-cell-green, .status-free {
+    color: green;
+}
+
+.pcb-cell-red, .status-busy {
+    color: red;
+}
+
+.pcb-cell-yellow {
+    color: yellow;
+}
+
+.color-gray {
+    color: #d4d4d4 !important;
+}
+
+.delete-icon {
+    cursor: pointer;
+    border-radius: 30px;
+}
+
+.delete-icon:hover {
+    background-color: rgba(57, 57, 57, 0.16);
+}
+
+.pcb-row-active {
+    background-color: #EEF1FA;
+}
+
+/* memory modal */
+.centered-modal .modal-dialog {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* memory rows */
+.memory-row,
+.memory-table-header{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    margin-left: 10px;
+    justify-items: center;
+}
+
+.memory-table-cell{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.memory-busy {
+    background-color: #EEF1FA;
+}
+
+/* job queue*/
+.jobqueue-row,
+.jobqueue-table-header{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: 10px;
+    justify-items: center;
+}
+
+.jobqueue-table-cell{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.jobqueue-container{
+
+}
+
+/* custom row modal */
+.custom-row {
+    max-width: fit-content !important;
+}
+
+.custom-row .modal-header {
+    border-bottom: none !important;
+    font-weight: 500;
+}
+
+.custom-row th {
+    font-weight: 600;
+}
+
+.custom-row th:not(.color-gray) {
+    color: var(--color-blue) !important;
+}
+
+.custom-row .row-cell {
+    width: 120px;
+    text-align: center;
+}
+
+.custom-row input {
+    outline: none;
+}
+
+.custom-row input::-webkit-outer-spin-button,
+.custom-row ::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.custom-row .modal-footer {
+    border-top: none !important;    
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.custom-row .btn-primary {
+    width: 150px;
+    border-radius: 0px;
+}
+
+.custom-row .btn-primary:hover {
+    background-color: var(--color-blue-lighter);
+    color: var(--color-blue)
+}
+.btn-badge-wrapper{
+  position: relative;
+  display: inline-block;
+}
+.btn-badge{
+  position: absolute;
+  top: -10px;
+  right: -15px;
+  background-color: var(--color-blue);
+  color: white;
+  border-radius: 50%;
+  padding: 5px 10px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-row .btn-add {
+    background-color: var(--color-blue);
+    color: white;
+}
+
+.custom-row .btn-add:hover {
+    background-color: var(--color-blue-darker);
+    color: white;
+}
+
+/* confirm switch modal */
+.confirm-switch .modal-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.confirm-switch p {
+    margin: 30px 0;
+}
+
+.confirm-switch .button-cont {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.confirm-switch .modal-content button {
+    border: 1px solid var(--color-blue);
+    border-radius: 50px;
+    padding: 5px 80px;
+    box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.confirm-switch button#Yes {
+    background-color: var(--color-blue);
+    color: white;
+}
+
+.confirm-switch button#Yes:hover {
+    background-color: var(--color-blue-darker);
+}
+
+.confirm-switch button#No {
+    background-color: white;
+    color: var(--color-blue);
+}
+
+.confirm-switch button#No:hover {
+    background-color: whitesmoke;
+}

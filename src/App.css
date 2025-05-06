@@ -1,0 +1,22 @@
+.App {
+  text-align: center;
+  background-color: #F5F5F5;
+
+  min-height: 100dvh;
+  min-width: 100dvw;
+}
+
+.btn-primary {
+  background-color: white;
+  color: var(--color-blue);
+  border: 1px solid var(--color-blue);
+  padding: 8px 20px;
+  border-radius: 30px;
+  width: 100%;
+  box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-blue);
+  color: white;
+}
