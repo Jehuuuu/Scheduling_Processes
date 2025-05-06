@@ -43,6 +43,8 @@ These are tasks needed to be done once after cloning the repository. If done alr
           "queue": []
         }
 
+    c. npm install -g json-server
+    d. run server using 'json-server src/components/data.json --port 3030'
 &nbsp;
 
 ## Run React APP
