@@ -18,7 +18,7 @@ These are tasks needed to be done once after cloning the repository. If done alr
     
     d. Insert the environment variables. 
     
-        Note: Please contact repository owner for the environment variables.
+        REACT_APP_JSON_SERVER=http://localhost:3030/ 
 3. Create `data.json` in `src > components` folder.
     
     a. Create new file and name it as `data.json`.
